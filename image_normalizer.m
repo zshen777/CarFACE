@@ -1,6 +1,8 @@
 close all; 
 clear all;
 
+% here's a comment
+
 current_raw_image=imread('2006_Honda_Civic.jpg');
 
 % figure
