@@ -3,7 +3,7 @@ clear all;
 
 % here's a comment
 
-current_raw_image=imread('2006_Honda_Civic.jpg');
+current_raw_image=imread('2009 Honda Civic 4D 3.jpg');
 
 % figure
 % imagesc(current_raw_image)
@@ -35,10 +35,10 @@ crop_vector=[col(left_indexes), row(top_indexes), vehicle_width, vehicle_height]
 scale_factor=800/vehicle_width;
 
 
-cropped_image=imcrop(A,crop_vector);
+cropped_image=imcrop(current_raw_image,crop_vector);
 resized_image=imresize(cropped_image,[scale_factor*vehicle_width scale_factor*vehicle_height]);
 
-% plot(col(left_indexes),row(left_indexes),'ro','MarkerSize',14)
-% plot(col(top_indexes),row(top_indexes),'ro','MarkerSize',14)
-% plot(col(right_indexes),row(right_indexes),'ro','MarkerSize',14)
-% plot(col(bottom_indexes),row(bottom_indexes),'ro','MarkerSize',14)
+plot(col(left_indexes),row(left_indexes),'ro','MarkerSize',14)
+plot(col(top_indexes),row(top_indexes),'ro','MarkerSize',14)
+plot(col(right_indexes),row(right_indexes),'ro','MarkerSize',14)
+plot(col(bottom_indexes),row(bottom_indexes),'ro','MarkerSize',14)
